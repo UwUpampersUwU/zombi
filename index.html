@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute;
+			left: 400px; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			left: 1200px;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score">score:</h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; ">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; ">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px">
+		<img class="zombies" src="zombie2.png" style="top: 320px">
+		<img class="zombies" src="zombie2.png" style="top: 420px">
+		<img class="zombies" src="zombie4.png" style="top: 520px">
+		<img class="zombies" src="zombie4.png" style="top: 620px">
+	</div>
+<script>
+let score = 0;
+let shooter = document.querySelectorAll(".shooter");
+let zombies = document.querySelectorAll(".zombies");
+	let gorohleft = 400;
+	let number = 1200;
+	zombies[0].onclick = function(){
+		number = number - 50;
+			zombies[0].style.left = number + "px";
+	if (number == gorohleft) {
+		alert("ням-ням")
+	zombies[0].style.display = "none"
+	shooter[0].style.display = "none"
+		}
+	}
+	let number1 = 1200;
+	zombies[1].onclick = function(){
+		number1 = number1 - 50;
+			zombies[1].style.left = number1 + "px";
+	if (number1 == gorohleft) {
+		alert("ням-ням")
+	zombies[1].style.display = "none"
+	shooter[1].style.display = "none"
+	}
+}
+	let number2 = 1200;
+	zombies[2].onclick = function(){
+			zombies[2].style.left = number2 + "px";
+		number2 = number2 - 50;
+	if (number2 == gorohleft) {
+		alert("ням-ням")
+	zombies[2].style.display = "none"
+	shooter[2].style.display = "none"
+	}
+}
+	let number3 = 1200;
+	zombies[3].onclick = function(){
+			zombies[3].style.left = number3 + "px";
+		number3 = number3 - 50;
+	if (number3 == gorohleft) {
+		alert("ням-ням")
+	zombies[3].style.display = "none"
+	shooter[3].style.display = "none"
+	}
+}
+	let number4 = 1200;
+	zombies[4].onclick = function(){
+			zombies[4].style.left = number4 + "px";
+		number4 = number4 - 50;
+	if (number4 == gorohleft) {
+		alert("ням-ням")
+	zombies[4].style.display = "none"
+	shooter[4].style.display = "none"
+	}
+}
+</script>
+</body>
+</html>
